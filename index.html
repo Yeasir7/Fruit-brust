@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust</title>
+
+    <!-- tailwind daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- customize -->
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'color': '#da373d',
+            'color-2': '#F85559',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- font -->
+  <style>
+    .lato{
+    font-family: "Lato", sans-serif;
+  }
+  </style>
+
 </head>
-<body>
-    
+<body class="lato">
+    <!-- nav -->
+    <div class="container mx-auto my-5 lg:mb-14">
+        <div class="navbar bg-base-100 bg-color-2 rounded-full lg:px-14 lg:py-7">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>Contact</a></li>
+                  <input class="ml-4 mt-4" type="text" placeholder="Search">
+                </ul>
+              </div>
+              <div class="space-x-6 hidden lg:flex text-white text-[18px] font-medium">
+                <a href="">Home</a><a href="">About</a><a href="">Shop</a><a href="">Contact</a>
+              </div>
+            </div>
+            <div class="navbar-center lg:gap-4">
+              <img src="images/logo.png" alt="">
+              <h1 class="text-4xl text-white font-bold">Fruit Burst</h1>
+            </div>
+            <div class="navbar-end">
+              <div class="bg-white flex px-6 py-3 rounded-full hidden lg:flex">
+                <input class="outline-none" type="text" placeholder="Search here">
+              <img src="images/Frame.png" alt="">
+              </div>
+            </div>
+          </div>
+    </div>
 </body>
 </html>
